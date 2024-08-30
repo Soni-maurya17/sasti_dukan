@@ -30,10 +30,11 @@ urlpatterns = [
     path('login/seller',main_views.seller_login_view,name='seller_login'),
     path('register/seller',main_views.seller_register_view,name='seller_register'),
     path('forgot/seller',main_views.seller_forgot_pass_view,name='seller_forgot_pass'),
+    #common to both
     path('logout/seller',main_views.logout_view,name='logout'),
     #indexx
     path('',main_views.home_view,name='home'),
-
+    path("__reload__/", include("django_browser_reload.urls")),
     
 ]
 
